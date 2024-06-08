@@ -1,0 +1,25 @@
+{
+   "name": "devspacebe",
+   "version": "1.0.0",
+   "main": "index.js",
+   "devDependencies": {},
+   "type": "module",
+   "scripts": {
+      "start": "nodemon index.js"
+   },
+   "dependencies": {
+     "express": "^4.19.2",
+     "mongodb": "^6.7.0",
+     "mongoose": "^8.4.1",
+     "bcryptjs": "^2.4.3",
+     "body-parser": "^1.20.2",
+     "cors": "^2.8.5",
+     "dotenv": "^16.3.1",
+     "jsonwebtoken": "^9.0.1",
+     "nodemon": "^3.0.1"
+   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

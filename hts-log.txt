@@ -1,0 +1,13 @@
+HTTrack3.49-2+htsswf+htsjava launched on Fri, 07 Jun 2024 19:17:07 at https://preview.cruip.com/devspace/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://preview.cruip.com/devspace/ -O1 "C:\Users\Owner\Desktop\My clone websites\Portfolio-Clone" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+19:17:08	Warning: 	Moved Permanently for https://preview.cruip.com/robots.txt
+19:17:08	Warning: 	File has moved from https://preview.cruip.com/robots.txt to https://preview.cruip.com/robots.txt/
+
+HTTrack Website Copier/3.49-2 mirror complete in 15 seconds : 47 links scanned, 46 files written (860379 bytes overall) [593834 bytes received at 39588 bytes/sec], 387447 bytes transferred using HTTP compression in 20 files, ratio 22%, 15.6 requests per connection
+(No errors, 2 warnings, 0 messages)

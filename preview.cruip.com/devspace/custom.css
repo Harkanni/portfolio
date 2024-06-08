@@ -1,0 +1,133 @@
+.me2-div {
+  width: 86px;
+  height: 80px;
+  margin-bottom: 1rem;
+  border: 2px solid #191b39;
+  border-radius: 99999px;
+  background: linear-gradient(to right, #4ca5ff, #b573f8);
+}
+
+.me2-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tab-head.active {
+   transition: background-color 0.25s ease-in;
+}
+
+.tab-body article {
+   display: none;
+}
+
+.tab-body #all {
+   display: block;
+}
+
+form {
+   overflow: hidden;
+}
+
+form .upload-area {
+   border-radius: 1rem;
+   width: 100%;
+   min-height: 70vh;
+   background-color: #151e30;
+   padding-top: 2rem;
+   padding-inline: 1.5rem;
+}
+
+form .upload-area[placeholder]::placeholder, form .upload-author[placeholder]::placeholder {
+   font-style: italic;
+}
+
+form .upload-author {
+   background-color: #151e30;
+   border-radius: 0.5rem;
+   margin-top: 1rem;
+}
+
+form button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 1rem;
+   background: #000 !important;
+   padding: 1rem;
+   width: 100%;
+   border-radius: 0.5rem;
+   margin-block: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* background: linear-gradient(to right, #4ca5ff, #b573f8);
+background: linear-gradient(to right, #ff7170, #ffe57f);
+background: linear-gradient(to right, #ff4cc2, #f87393);
+background: linear-gradient(to right, #ff4cc2, #f87393);
+background: linear-gradient(to right, #854cff, #b573f8);
+background: linear-gradient(to right, #854cff, #b573f8);
+background: linear-gradient(to right, #7affd7, #00ffb2);
+background: linear-gradient(to right, #4c73ff, #73e0f8);
+background: linear-gradient(to right, #4c73ff, #73e0f8);
+background: linear-gradient(90deg,#7affd7,#00ffb2) !important;
+background: linear-gradient(90deg,#4c73ff 2.34%,#389bff 100.78%);
+background: linear-gradient(90deg,#ff7170 -50.34%,#ffe57f 100.78%);
+background: linear-gradient(90deg,#4c73ff 2.34%,#389bff 100.78%);
+} */
