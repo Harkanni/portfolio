@@ -60,6 +60,12 @@ form button {
    margin-block: 1rem;
 }
 
+pre {
+   border-radius: 0.5rem;
+   overflow: hidden;
+   margin-block: 1rem;
+}
+
 
 
 

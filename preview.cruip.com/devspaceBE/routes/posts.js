@@ -6,9 +6,9 @@ const Router = express.Router();
 
 Router.get('/', GetAllPosts);
 
-Router.get('/', GetPost);
+Router.get('/:id', GetPost);
 
-Router.post('/', CreatePost)
+Router.post('/submit', CreatePost)
 
 
 export default Router;

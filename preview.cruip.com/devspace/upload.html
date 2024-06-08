@@ -6,8 +6,13 @@
    <meta charset="utf-8">
    <title>DevSpace Upload Post</title>
    <meta name="viewport" content="width=device-width,initial-scale=1">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
    <link href="style.css" rel="stylesheet">
    <link rel="stylesheet" href="custom.css">
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+   
    <script>
       if (localStorage.getItem('dark-mode') === 'false' || !('dark-mode' in localStorage)) {
          document.querySelector('html').classList.remove('dark');
@@ -15,6 +20,12 @@
          document.querySelector('html').classList.add('dark');
       }
    </script>
+   <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+          // Initialize highlight.js after the DOM is loaded
+          hljs.highlightAll();
+      });
+  </script>
    <script defer data-domain='preview.cruip.com,rollup.cruip.com' src='../../plausible.cruip.com/js/script.js'></script>
 </head>
 
@@ -221,21 +232,27 @@
                                     </li>
                                  </ul>
                               </div>
-                              <h1 class="cpynq cjd5a ciz93">How to Control CSS Animations with JavaScript</h1>
+                              <h1 class="cpynq cjd5a ciz93" style="margin-bottom: 1.5rem;">Start typing your post. Preview appears below</h1>
                            </header>
-
-                           <!-- POST Content -->
-                           <div></div>
                         </article>
 
-                        <form style="display: block; width: 100%;" id="form">
-                           <textarea name="" id="" class="upload-area" placeholder="start typing...."></textarea>
+                        <article>
+                           <!-- POST Content -->
+                           <div id="preview">
+                           </div>
+                        </article>
+
+                        <form style="display: block; width: 100%;" id="content-form">
+                           <textarea name="" id="" class="upload-area" placeholder="start typing...."
+                              oninput="Preview(this.value)"></textarea>
                            <input type="text" class="upload-author" placeholder="Enter author name">
                            <button type="submit">
                               Upload Now
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-threads" viewBox="0 0 16 16">
-                                 <path d="M6.321 6.016c-.27-.18-1.166-.802-1.166-.802.756-1.081 1.753-1.502 3.132-1.502.975 0 1.803.327 2.394.948s.928 1.509 1.005 2.644q.492.207.905.484c1.109.745 1.719 1.86 1.719 3.137 0 2.716-2.226 5.075-6.256 5.075C4.594 16 1 13.987 1 7.994 1 2.034 4.482 0 8.044 0 9.69 0 13.55.243 15 5.036l-1.36.353C12.516 1.974 10.163 1.43 8.006 1.43c-3.565 0-5.582 2.171-5.582 6.79 0 4.143 2.254 6.343 5.63 6.343 2.777 0 4.847-1.443 4.847-3.556 0-1.438-1.208-2.127-1.27-2.127-.236 1.234-.868 3.31-3.644 3.31-1.618 0-3.013-1.118-3.013-2.582 0-2.09 1.984-2.847 3.55-2.847.586 0 1.294.04 1.663.114 0-.637-.54-1.728-1.9-1.728-1.25 0-1.566.405-1.967.868ZM8.716 8.19c-2.04 0-2.304.87-2.304 1.416 0 .878 1.043 1.168 1.6 1.168 1.02 0 2.067-.282 2.232-2.423a6.2 6.2 0 0 0-1.528-.161"/>
-                               </svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                 class="bi bi-threads" viewBox="0 0 16 16">
+                                 <path
+                                    d="M6.321 6.016c-.27-.18-1.166-.802-1.166-.802.756-1.081 1.753-1.502 3.132-1.502.975 0 1.803.327 2.394.948s.928 1.509 1.005 2.644q.492.207.905.484c1.109.745 1.719 1.86 1.719 3.137 0 2.716-2.226 5.075-6.256 5.075C4.594 16 1 13.987 1 7.994 1 2.034 4.482 0 8.044 0 9.69 0 13.55.243 15 5.036l-1.36.353C12.516 1.974 10.163 1.43 8.006 1.43c-3.565 0-5.582 2.171-5.582 6.79 0 4.143 2.254 6.343 5.63 6.343 2.777 0 4.847-1.443 4.847-3.556 0-1.438-1.208-2.127-1.27-2.127-.236 1.234-.868 3.31-3.644 3.31-1.618 0-3.013-1.118-3.013-2.582 0-2.09 1.984-2.847 3.55-2.847.586 0 1.294.04 1.663.114 0-.637-.54-1.728-1.9-1.728-1.25 0-1.566.405-1.967.868ZM8.716 8.19c-2.04 0-2.304.87-2.304 1.416 0 .878 1.043 1.168 1.6 1.168 1.02 0 2.067-.282 2.232-2.423a6.2 6.2 0 0 0-1.528-.161" />
+                              </svg>
                            </button>
                         </form>
 
@@ -391,6 +408,10 @@
 
    <script src="js/vendors/alpinejs.min.js" defer=""></script>
    <script src="js/main.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+   <script src="js/post.js"></script>
+   <script>hljs.highlightAll();</script>
 
 
 
