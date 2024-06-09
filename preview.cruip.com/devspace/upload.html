@@ -12,7 +12,7 @@
 
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-   
+
    <script>
       if (localStorage.getItem('dark-mode') === 'false' || !('dark-mode' in localStorage)) {
          document.querySelector('html').classList.remove('dark');
@@ -22,10 +22,10 @@
    </script>
    <script>
       document.addEventListener('DOMContentLoaded', (event) => {
-          // Initialize highlight.js after the DOM is loaded
-          hljs.highlightAll();
+         // Initialize highlight.js after the DOM is loaded
+         hljs.highlightAll();
       });
-  </script>
+   </script>
    <script defer data-domain='preview.cruip.com,rollup.cruip.com' src='../../plausible.cruip.com/js/script.js'></script>
 </head>
 
@@ -232,20 +232,24 @@
                                     </li>
                                  </ul>
                               </div>
-                              <h1 class="cpynq cjd5a ciz93" style="margin-bottom: 1.5rem;">Start typing your post. Preview appears below</h1>
+                              <h1 class="cpynq cjd5a ciz93" style="margin-bottom: 1.5rem;">Start typing your post.
+                                 Preview appears below</h1>
                            </header>
                         </article>
 
-                        <article>
+                        <article class="preview-content">
                            <!-- POST Content -->
                            <div id="preview">
                            </div>
                         </article>
 
                         <form style="display: block; width: 100%;" id="content-form">
-                           <textarea name="" id="" class="upload-area" placeholder="start typing...."
+                           <input type="text" class="upload-author" placeholder="Enter Title" id="upload-title">
+                           <textarea name="" id="upload-area" class="upload-area" placeholder="start typing...."
                               oninput="Preview(this.value)"></textarea>
-                           <input type="text" class="upload-author" placeholder="Enter author name">
+                           <textarea type="text" class="upload-description" placeholder="Enter your description" id="upload-description"></textarea>
+                           <input type="text" class="upload-author" placeholder="Enter author name" id="upload-author">
+                           <input type="file" alt="" class="upload-image" placeholder="Select an image">
                            <button type="submit">
                               Upload Now
                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

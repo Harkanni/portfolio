@@ -5,12 +5,16 @@ const form = document.getElementById('content-form');
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  const content = document.querySelector('.upload-area').value;
-  const author = document.querySelector('.upload-author').value;
+  const title = document.querySelector('#upload-title').value;
+  const content = document.querySelector('#upload-area').value;
+  const description = document.querySelector('#upload-description').value;
+  const author = document.querySelector('#upload-author').value;
 
   const formData = {
+    title: title,
     content: content,
-    author: author
+    author: author,
+    description: description
   };
 
   console.log(formData);
@@ -28,7 +32,7 @@ form.addEventListener('submit', async (e) => {
    if (response.ok) {
        console.log('Form submitted successfully');
        alert('Form submitted successfully');
-       form.reset();
+      //  form.reset();
    } else {
        console.error('Failed to submit form:', response.statusText);
        alert('Failed to submit form');
